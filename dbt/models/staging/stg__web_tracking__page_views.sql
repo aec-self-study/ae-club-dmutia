@@ -4,6 +4,11 @@ with source as (
     select *
     from {{ source('web_tracking', 'pageviews')}}
 )
-select *
+select 
+    id,
+    coalesce(customer_id, visitor_id) as visitor_id,
+    device_type,
+    timestamp,
+    page,
+    customer_id
 from source
-limit 10
