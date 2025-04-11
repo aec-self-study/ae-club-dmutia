@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: web_tracking
-    database: analytics-engineers-club
-    schema: web_tracking  
-    tables:
-      - name: pageviews
